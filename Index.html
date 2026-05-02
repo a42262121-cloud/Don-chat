@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Don Chat v2</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="auth">
+  <h2>Don Chat v2</h2>
+  <input id="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+  <button id="loginBtn">Login</button>
+  <button id="signupBtn">Sign Up</button>
+</div>
+
+<div id="chat" style="display:none;">
+  <div class="topbar">
+    <h3>Don Chat</h3>
+    <button id="toggleTheme">🌙</button>
+    <input type="file" id="dpUpload" accept="image/*">
+    <img id="myDp" src="" width="40" height="40" style="border-radius:50%;">
+  </div>
+  
+  <div class="tabs">
+    <button id="dmTab" class="active">DM</button>
+    <button id="roomTab">Rooms</button>
+  </div>
+
+  <div id="dmBox">
+    <input id="searchUser" placeholder="Add friend by email">
+    <button id="addFriendBtn">Add</button>
+    <div id="friendRequests"></div>
+    <div id="users"></div>
+  </div>
+
+  <div id="roomBox" style="display:none;">
+    <input id="roomName" placeholder="Room name">
+    <button id="createRoomBtn">Create Room</button>
+    <input id="roomCode" placeholder="Enter Room Code">
+    <button id="joinRoomBtn">Join Room</button>
+    <div id="roomsList"></div>
+  </div>
+
+  <div id="messages"></div>
+  <div id="typing"></div>
+  <div class="inputBox">
+    <input id="msgInput" placeholder="Type message...">
+    <button id="emojiBtn">😀</button>
+    <input type="file" id="imgUpload" accept="image/*">
+    <button id="voiceBtn">🎤</button>
+    <button id="sendBtn">Send</button>
+  </div>
+</div>
+<audio id="msgSound" src="https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3" preload="auto"></audio>
+<script type="module" src="script.js"></script>
+</body>
+</html>
